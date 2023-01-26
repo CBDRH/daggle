@@ -17,7 +17,7 @@ app_ui <- function(request) {
                tabPanel("Random", icon = icon('diagram-project'),
 
                         # Left hand column
-                        column(width = 3, textOutput("test"),
+                        column(width = 3,
                                tippy::tippy_class("tool-tip") # Need this for tippy libraries to be loaded
                         ),
 

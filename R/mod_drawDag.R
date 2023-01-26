@@ -33,7 +33,8 @@ mod_drawDag_server <- function(id, did, dag, n, pid, label = 0, colliderlines = 
             need(n() >2 & n() <9, "The number of nodes should be between 3 and 8"),
             need(is.integer(pid())==TRUE & pid()>=100 & pid()<=999, "The daggle id should be an integer between 100 and 999")
           )
-
+        # p <- plot(rnorm(1000))
+          # p <- plot(dag()$dag)
         p <- dag() %>%
           node_status() %>% # Need to refresh node status here in case adjustment has added new records to the tidy_dagitty data object
           mutate(col = factor(case_when(status=='exposure' ~ 1,
@@ -49,19 +50,18 @@ mod_drawDag_server <- function(id, did, dag, n, pid, label = 0, colliderlines = 
             geom_dag_text() +
             theme_dag(legend.position = 'bottom', plot.background = ggplot2::element_rect(fill='white', color='white')) +
             guides(color = guide_legend(override.aes = list(size = 9))) +
-            scale_fill_manual(NULL,
+            scale_fill_manual("",
                               values = c('exposure' = exposureCol, 'outcome' = outcomeCol, 'adjusted' = adjustedCol, 'unadjusted' = unadjustedCol),
                               labels = c('exposure' = 'Exposure', 'outcome' = 'Outcome', 'adjusted' = "Adjusted", 'unadjusted' = "Unadjusted"),
                               na.value = naCol, drop = FALSE) +
-            scale_color_manual(NULL,
+            scale_color_manual("",
                                values = c('exposure' = exposureCol, 'outcome' = outcomeCol, 'adjusted' = adjustedCol, 'unadjusted' = unadjustedCol),
                                labels = c('exposure' = 'Exposure', 'outcome' = 'Outcome', 'adjusted' = "Adjusted", 'unadjusted' = "Unadjusted"),
                                na.value = naCol, drop = FALSE) +
-            scale_shape_manual(NULL,
+            scale_shape_manual("",
                                values = c('exposure' = 21, 'outcome' = 21, 'adjusted' = 22, 'unadjusted' = 21),
                                labels = c('exposure' = 'Exposure', 'outcome' = 'Outcome', 'adjusted' = "Adjusted", 'unadjusted' = "Unadjusted"),
                                na.value = naCol, drop = FALSE)
-
 
           # Add label if one is defined
           if (label == 1) {
@@ -80,6 +80,7 @@ mod_drawDag_server <- function(id, did, dag, n, pid, label = 0, colliderlines = 
 
 
         output$plot <- renderPlot({
+
           req(dagPlot())
 
           dagPlot()
