@@ -10,7 +10,7 @@ name: R
 
 on:
   push:
-    branches: [ "main" "solving-gha"]
+    branches: [ "main", "solving-gha"]
   pull_request:
     branches: [ "main" ]
 
