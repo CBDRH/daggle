@@ -6,7 +6,7 @@ Authors@R:
 Description: A tool to support learning and teaching the graphical rules
     of selecting adjustment variables using directed acyclic graphs
     (DAGs).
-License: MIT + file LICENSE
+License: CC BY-SA 4.0
 URL: https://github.com/CBDRH/daggle
 BugReports: https://github.com/CBDRH/daggle/issues
 Imports: 
