@@ -31,7 +31,8 @@ Imports:
     tippy (>= 0.1.0)
 Suggests: 
     testthat (>= 3.0.0),
-    dagitty (>= 0.3.1)
+    dagitty (>= 0.3.1),
+    covr
 Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true

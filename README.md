@@ -4,6 +4,12 @@
 # Daggle
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/CBDRH/daggle/actions/workflows/check-release.yaml/badge.svg)](https://github.com/CBDRH/daggle/actions/workflows/check-release.yaml)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- [![Codecov test coverage](https://codecov.io/gh/CBDRH/daggle/branch/main/graph/badge.svg)](https://app.codecov.io/gh/CBDRH/daggle?branch=main) -->
+
 <!-- badges: end -->
 
 ## Introduction
