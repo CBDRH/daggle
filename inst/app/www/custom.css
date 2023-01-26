@@ -1,0 +1,142 @@
+
+.alert {
+  background-color: white;
+  padding: 0px 10px 10px 10px;
+}
+
+.code {
+  background-color: white;
+}
+
+
+.download {
+  border-color: white;
+  color: #ccc;
+}
+
+.download2 {
+  border-color: white;
+  background-color: white;
+  color: #1DA1F2;
+}
+
+
+.download2:hover {
+  border-color: #1DA1F2;
+  background-color: #ECF4FC;
+  color: #1DA1F2;
+}
+
+.navbar-nav {
+  float: none !important;
+}
+.navbar-nav > li:nth-child(n+4) {
+  float: right;
+}
+
+.twitter-share-button {
+  background-color: #1DA1F2; /* Twitter Blue */
+  color: white;
+  padding: 6px 0;
+  text-align: center;
+  width: 140px;
+}
+
+#run2 {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc !important;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+#run2:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c !important;
+}
+
+#link2 {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc !important;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  margin:10px;
+}
+
+#link2:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c !important;
+}
+
+.myHr {
+  background-color: #eee;
+  height: 1px;
+  border: 0;
+}
+
+.codeBlock {
+  padding: 5px;
+  width: fit-content;
+  background-color: #f8f8f8;
+  font-family: Monospace;
+  display: flex;
+}
+
+.xNode {
+  display: inline-block;
+  background-color: #CDDC55;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  vertical-align:middle;
+  text-align: center;
+}
+
+.yNode {
+  display: inline-block;
+  background-color: #4FBAE4;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  vertical-align:middle;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.helpBox {
+  font-size: 9pt;
+  text-align: left;
+}

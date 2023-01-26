@@ -1,0 +1,33 @@
+---
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tippy)
+library(shiny)
+
+# → ← Ice-cream `r emo::ji('icecream')` and Sunburn `r emo::ji('sun')`
+
+```
+
+Marie Freeman, an emergency department triage nurse, noted that patients presenting with severe sunburn often reported recently eating ice-cream. Marie started to wonder _**Does eating ice-cream cause sunburn?**_
+
+```{r}
+tags$p(
+"This hypothetical relationship is represented in the directed acyclic graph (DAG) by the", tags$span(style="color:#4FBAE4; font-weight:bold", tippy('directed path', tags$p(class='helpBox', "A directed path on a causal DAG is any path between the exposure and outcome where all of the arrows point towards the exposure. This is also referred to as a causal path"))), "from exposure X (Ice-cream) to outcome Y (Sunburn), X → Y."
+)
+```
+
+Marie also knew that more people eat ice-cream on sunny days and that sunburn is more common on sunny days too. Both of these assumptions are represented on the DAG. The arrow X ← Z represents the effect of sunshine on ice-cream consumption and the arrow Z → Y represents the effect of sunshine on sunburn. Sunshine is a common cause of the exposure and outcome. In epidemiological terms we call this a confounder.
+
+```{r}
+tags$p(
+'Combined, these assumptions result in an open', tags$span(style="color:#4FBAE4; font-weight:bold", tippy('non-causal path', tags$p(class='helpBox', 'A non-causal path on a DAG is a path that connects the exposure and outcome where one or more arrows points backwards towards the exposure'))), 'between Ice-cream and Sunburn X ← Z →Y. Non-causal paths are easy to spot on a DAG because one or more arrows on the path point back towards the exposure.'
+)
+```
+This non-causal path is also considered open because it can transmit statistical association: any observed correlation between Ice-cream and Sunburn could be due to confounding by Sunshine. To determine whether there is a causal effect of Ice-cream on Sunburn Marie needs to close the non-causal path. 
+
+To close the non-causal path X ← Z → Y  Marie must somehow control for Z in the analysis. In practice, there are many ways to do this. For example, by including the amount of sunshine received as a covariate in a regression analysis. 
+
+Here in the daggle app you can click on a node to "control" for that variable. The node will change from a grey circle to a pink square to indicate that the variable should be controlled for in the analysis. So what should Marie control for to test the hypothesis that eating ice-cream cause sunburn? Enter your solution and check the result.

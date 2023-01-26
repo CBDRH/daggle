@@ -1,0 +1,22 @@
+---
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tippy)
+library(shiny)
+
+# → ← I
+
+```
+
+```{r}
+tags$p(
+  "In order to quantify how much of the effect of exercise on mood was attributable to sleep quality, Grace would need to compare the total effect to the ", tags$span(style="color:#4FBAE4; font-weight:bold", tippy("direct effect", tags$p(class='helpBox', "The direct effect is the portion of the total effect that goes directly from the exposure to the outcome (X → Y) rather than being mediated through some other variable"))), "of exercise on mood.
+  ")
+```
+
+To isolate the direct effect, any causal paths that include mediators must be closed (in addition to closing any open non-causal paths). Just like in the confounding example, a path with a mediator can be closed by controlling for the mediator in the analysis.
+
+Enter your solution to identify the **direct** effect of exercise on mood.

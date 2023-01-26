@@ -1,0 +1,26 @@
+---
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tippy)
+library(shiny)
+
+# → ← I
+
+```
+
+As we saw in earlier examples, researchers are sometimes interested in the **direct** effect of an exposure on an outcome. To isolate the direct effect means that any mediators need to be controlled for. However, in doing so the researcher can inadvertently introduce bias. This can happen if a mediator on the exposure-outcome path is also a collider on a different path between the exposure and outcome: controlling for a collider will open this latter path. The resulting bias is known as collider bias or collider stratification bias. 
+
+In this example, Armin Perez, a substance use disorder counsellor, noted that many of his clients with opioid use disorder had histories of traumatic childhood experiences. He decided to explore the question _**Does childhood abuse have a direct effect on the risk of opioid use disorder later in life?**_ 
+
+This hypothesised relationship is represented in the DAG by the directed arrow from exposure X (Childhood abuse) to outcome Y (Opioid use disorder), X → Y.
+
+There could be a number of possible mediators on this pathway such as chronic pain and mental health issues. In this example we are only considering a mediated effect through Chronic pain (X → Z1 → Y). Armin also believes that Chronic pain and Opioid use disorder can also both be caused by Unintentional injury (Z1 ←Z2 → Y). This means that as well as being a mediator on the causal path, Chronic pain (Z1) is a collider on the path between Childhood abuse (X) and Unintentional injury (Z2). Unintentional injury is an example of a mediator-outcome confounder. Controlling for chronic pain will risk introducing collider bias by opening the non-causal path X → Z1 ←Z2 → Y. 
+
+All is not lost - Armin will still be able to estimate the direct effect of childhood abuse on opioid disorder without introducing collider bias provided he can also close the non-causal path that is opened by controlling for the mediator chronic pain. 
+
+What should Armin control for to estimate the **direct** effect of childhood abuse on opioid use disorder?
+
+Enter your solution and check the result.

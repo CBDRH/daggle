@@ -1,0 +1,23 @@
+---
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tippy)
+library(shiny)
+
+# → ← I
+
+```
+
+Dr Grace Chen, a general practitioner, often found that regular exercise helped to improve mood among patients with mood disorders like depression. Grace decided to explore the research question _**How does exercise improve mood?**_ 
+
+This DAG reflects the assumption that there are two ways that Exercise can improve Mood, either directly (X &rarr; Y) or indirectly via sleep quality (X &rarr; Z &rarr; Y). The variable sleep quality is called a mediator in this example---it is a variable on the causal path from the exposure to the outcome. 
+
+```{r}
+tags$p(
+"If Grace was interested in the", tags$span(style="color:#4FBAE4; font-weight:bold", tippy('total effect', tags$p(class='helpBox', "The total effect of an exposure on an outcome includes direct effects like X → Y and indirect effects that pass thorugh one or more mediators, like X → Z → Y"))) , "of Exercise on Mood regardless of which path it occurs through then she should make sure the path including sleep quality remains open in her analysis.")
+```
+
+Enter your solution to identify the **total** effect of exercise on mood.

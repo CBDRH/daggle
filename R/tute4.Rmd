@@ -1,0 +1,26 @@
+---
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tippy)
+library(shiny)
+
+# → ← I
+
+```
+
+Noor Ahmed, an Infectious Diseases ward nurse, noticed that patients with coronavirus disease were often smokers. Noor asked the question: _**Does smoking increase the risk of being infected with coronavirus?**_
+
+This potential relationship is represented in the DAG by the directed arrow from exposure X (Smoking) to outcome Y (Coronavirus), X → Y.
+
+Noor wanted to investigate this question using electronic hospital records to identify smoking status and coronavirus infection for admitted patients. However, their colleague pointed out that this could be problematic because smoking and coronavirus were both risk factors for hospitalisation.
+
+The DAG shown here reflects this perspective. We can see the assumptions that Smoking increases the risk of Hospitalisation (X → Z) and Coronavirus increases the risk of Hospitalisation (Y → Z). The path X → Z ←  Y  is a non-causal path between Smoking and Coronavirus but importantly it is not an _open_ path. 
+
+This is because here Hospitalisation is a special type of variable known as a ‘Collider’, a variable that is caused by both the exposure and the outcome. Paths with uncontrolled colliders are closed such that no statistical association is transmitted along these paths. Think of it like streams of water arriving at the same point from two directions, the streams collide and the water can't go anywhere, the pathway is blocked. 
+
+If Noor decided to investigate this question using hospital records their analysis would only include data for individuals who were hospitalised. This would stratify the population and effectively adjust for hospitalisation status in the analysis. By using hospital data they would have opened a non-causal pathway thus creating an alternate route for the association between smoking and COVID-19 infection and more importantly, potentially introducing bias on the estimate of smoking on coronavirus. This phenomenon is known as collider bias or collider stratification bias and happens more often than you would think.
+
+So, should Noor investigate their research question using electronic health records (effectively controlling for hospitalisation status)? Enter your solution and check the result. 

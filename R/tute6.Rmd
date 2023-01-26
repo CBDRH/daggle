@@ -1,0 +1,22 @@
+---
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tippy)
+library(shiny)
+
+# → ← I
+
+```
+
+Dr Linda Goodes, a paediatric dietitian, read a news article reporting that the prevalence of obesity is increasing among children and wondered whether this could relate to greater time spent using screen-based devices such as computers, tablets and mobile phones. 
+
+Linda decided to explore the research question _**Does an increasing amount of screen time cause obesity?**_
+
+This potential relationship is represented in the DAG by the directed arrow from exposure X (Screen time) to outcome Y (Obesity), X → Y.
+
+You should be able to see an example each of a confounder, a collider and a mediator in this DAG. Given what you learnt in the earlier examples, what would you condition on to estimate the **total** effect of screen time on obesity? 
+
+Enter your solution and check the result. 
