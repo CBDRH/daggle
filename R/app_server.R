@@ -617,7 +617,7 @@ app_server <- function( input, output, session ) {
                              animation = FALSE,
                              showConfirmButton = FALSE,
                              className = "alert",
-                             timer = 1500,
+                             timer = 10000,
                              closeOnClickOutside = TRUE,
                              closeOnEsc = TRUE,
                              html = TRUE)
@@ -937,6 +937,9 @@ app_server <- function( input, output, session ) {
 
 
   observeEvent(input$hint2, {
+
+    rv$path2 <- 1
+
     showModal(modalDialog(
       title = NULL,
       tagList(
