@@ -4,14 +4,6 @@
 #'
 #' @param td A `tidy_dagitty` object
 #' @return A named list containing two dagitty objects. The first element preserves the layout for plotting with `plot.dagitty()` or on [dagitty.net](http://www.dagitty.net/dags.html). The second element preserves the layout to plot with `ggdag` functions.
-#' @export
-#'
-#' @examples
-#'
-#' tidyDag <- randDAG(5, .6)
-#' ud <- untidy_dagitty(tidyDag)
-#' plot(ud[["dagitty"]])
-#' ggdag::ggdag(ud[["rString"]])
 
 untidy_dagitty <- function(td){
 

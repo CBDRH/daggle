@@ -8,10 +8,7 @@
 #'
 #' @return A `tidy_dagitty` object
 #'
-#' @export
 #'
-#' @examples
-#' dag <- randDAG(6, .5)
 randDAG <- function(n, p, seed=1234){
 
   set.seed(seed)

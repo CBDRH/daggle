@@ -19,6 +19,3 @@ A `tidy_dagitty` object
 \description{
 Generate a random dag with assigned exposure & outcome and standard naming convention
 }
-\examples{
-dag <- randDAG(6, .5)
-}
