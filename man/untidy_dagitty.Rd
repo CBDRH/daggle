@@ -15,10 +15,3 @@ A named list containing two dagitty objects. The first element preserves the lay
 \description{
 Revert a basic `tidy_dagitty` object to a `dagitty` object while preserving node positions
 }
-\examples{
-
-tidyDag <- randDAG(5, .6)
-ud <- untidy_dagitty(tidyDag)
-plot(ud[["dagitty"]])
-ggdag::ggdag(ud[["rString"]])
-}

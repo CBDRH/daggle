@@ -617,7 +617,7 @@ app_server <- function( input, output, session ) {
                              animation = FALSE,
                              showConfirmButton = FALSE,
                              className = "alert",
-                             timer = 1500,
+                             timer = 10000,
                              closeOnClickOutside = TRUE,
                              closeOnEsc = TRUE,
                              html = TRUE)
@@ -761,14 +761,14 @@ app_server <- function( input, output, session ) {
   output$tuteText <- renderUI({
     # tute <- paste0("R/tute", input$tuteID, ".html")
     # includeHTML(tute)
-    if(input$tuteID=='1'){ includeHTML("R/tute1.html")}
-    else if (input$tuteID=='2'){ includeHTML("R/tute2.html")}
-    else if (input$tuteID=='3'){ includeHTML("R/tute3.html")}
-    else if (input$tuteID=='4'){ includeHTML("R/tute4.html")}
-    else if (input$tuteID=='5'){ includeHTML("R/tute5.html")}
-    else if (input$tuteID=='6'){ includeHTML("R/tute6.html")}
-    else if (input$tuteID=='7'){ includeHTML("R/tute7.html")}
-    else if (input$tuteID=='8'){ includeHTML("R/tute8.html")}
+    if(input$tuteID=='1'){ includeHTML("inst/app/www/tutorials/tute1.html")}
+    else if (input$tuteID=='2'){ includeHTML("inst/app/www/tutorials/tute2.html")}
+    else if (input$tuteID=='3'){ includeHTML("inst/app/www/tutorials/tute3.html")}
+    else if (input$tuteID=='4'){ includeHTML("inst/app/www/tutorials/tute4.html")}
+    else if (input$tuteID=='5'){ includeHTML("inst/app/www/tutorials/tute5.html")}
+    else if (input$tuteID=='6'){ includeHTML("inst/app/www/tutorials/tute6.html")}
+    else if (input$tuteID=='7'){ includeHTML("inst/app/www/tutorials/tute7.html")}
+    else if (input$tuteID=='8'){ includeHTML("inst/app/www/tutorials/tute8.html")}
   })
 
   # Reveal solution on click
@@ -937,6 +937,9 @@ app_server <- function( input, output, session ) {
 
 
   observeEvent(input$hint2, {
+
+    rv$path2 <- 1
+
     showModal(modalDialog(
       title = NULL,
       tagList(
