@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-![](inst/app/www/daggle-logo.png)
+# Daggle
 
 <!-- badges: start -->
 <!-- badges: end -->
