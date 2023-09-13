@@ -1,6 +1,6 @@
 Package: daggle
 Title: The daggle app
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person("Mark", "Hanly", , "m.hanly@unsw.edu.au", role = c("cre", "aut"))
 Description: A tool to support learning and teaching the graphical rules
@@ -24,7 +24,7 @@ Imports:
     rclipboard (>= 0.1.6),
     rlang (>= 1.0.6),
     shiny (>= 1.7.4),
-    shinyalert (>= 3.0.0),
+    shinyalert (>= 3.0.0.90),
     shinyjs (>= 2.1.0),
     stats,
     stringr (>= 1.5.0),
